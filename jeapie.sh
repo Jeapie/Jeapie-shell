@@ -28,7 +28,7 @@ print_version () {
     echo "$APP_NAME $VERSION"
 }
 
-# Option parsing
+
 optstring="k:t:p:b"
 while getopts ${optstring} c; do
     case ${c} in
@@ -53,7 +53,7 @@ while getopts ${optstring} c; do
 done
 shift $((OPTIND-1))
 
-# Is there anything left?
+
 if [ "$#" -lt 1 ]; then
     usage
 fi
